@@ -1,0 +1,12 @@
+{
+  "name": "easyeda-local-mcp",
+  "version": "0.1.0",
+  "description": "Local MCP and CLI adapter for the native EasyEDA Pro / JLCEDA Pro v4 command line",
+  "type": "module",
+  "license": "MIT",
+  "bin": { "easyeda-local": "src/cli.js" },
+  "files": ["src", "examples", "README.md", "LICENSE", "SECURITY.md"],
+  "engines": { "node": ">=22" },
+  "scripts": { "test": "node --test", "mcp": "node src/cli.js mcp" },
+  "dependencies": { "@modelcontextprotocol/sdk": "^1.0.0", "zod": "^3.25.0" }
+}

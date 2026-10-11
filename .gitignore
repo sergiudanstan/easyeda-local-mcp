@@ -1,0 +1,14 @@
+node_modules/
+artifacts/
+evidence/
+private/
+.env*
+*.log
+.DS_Store
+*.eprj*
+*.epro*
+*.kicad_*
+*.zip
+*.eext
+*.pem
+*.key
