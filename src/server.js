@@ -6,7 +6,7 @@ import { doctor, runNative, invoke, checkArtifact, errorEnvelope } from './nativ
 const readOnly = { readOnlyHint: true, destructiveHint: false, openWorldHint: false };
 const mutation = { readOnlyHint: false, destructiveHint: true, openWorldHint: true };
 export function createServer(options = {}) {
-  const server = new McpServer({ name: 'easyeda-local-mcp', version: '0.1.0' });
+  const server = new McpServer({ name: 'easyeda-local-mcp', version: '0.2.0' });
   const register = (name, description, inputSchema, annotations, fn) => server.registerTool(name, { description, inputSchema, annotations }, async args => {
     try { const data = await fn(args); return { content: [{ type: 'text', text: JSON.stringify(data) }], isError: false }; }
     catch (error) { return { content: [{ type: 'text', text: JSON.stringify(errorEnvelope(error)) }], isError: true }; }

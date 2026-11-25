@@ -1,5 +1,10 @@
 # easyeda-local-mcp
 
+[![CI](https://github.com/sergiudanstan/easyeda-local-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/sergiudanstan/easyeda-local-mcp/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/sergiudanstan/easyeda-local-mcp/actions/workflows/codeql.yml/badge.svg)](https://github.com/sergiudanstan/easyeda-local-mcp/actions/workflows/codeql.yml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/sergiudanstan/easyeda-local-mcp/badge)](https://scorecard.dev/viewer/?uri=github.com/sergiudanstan/easyeda-local-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 A small, MIT-licensed CLI and stdio MCP adapter for the **native EasyEDA Pro / JLCEDA Pro v4.1.60+ desktop CLI**. It calls the official editor API through the installed application. No browser automation, extension installation, background HTTP server, or cloud relay is required.
 
 This is an independent adapter, not an EasyEDA product. EasyEDA's native CLI already includes its own MCP server (`--mcp stdio`). Use that directly if you prefer. This adapter adds a consistent seven-tool interface, shell-free invocation, connection checks, explicit native exit-code checks, and file evidence checks.
@@ -80,6 +85,10 @@ easyeda-local invoke --session SESSION_ID --file examples/known-failure.js
 ```
 
 Automated tests cover malformed/missing output, nonzero native exit codes, disconnected bridges, version mismatches, timeouts, shell-literal arguments, artifact failures, and a real MCP stdio handshake with failure propagation. These use a synthetic executable and do not replace testing against your installed editor.
+
+## Development
+
+`npm ci && npm test` runs the suite against a synthetic native executable. See [CONTRIBUTING.md](CONTRIBUTING.md) for branches and releases, [SECURITY.md](SECURITY.md) for reporting vulnerabilities, and [CHANGELOG.md](CHANGELOG.md) for history.
 
 ## References
 
